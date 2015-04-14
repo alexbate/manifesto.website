@@ -30,7 +30,7 @@
       </div>
     </div>
 
-  <div class="container">
+  <div class="container" id="parties">
     <a href="https://s3-eu-west-1.amazonaws.com/manifesto2015/ConservativeManifesto2015.pdf">
     <div class="panel panel-default">
       <div class="panel-body">
@@ -83,5 +83,14 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
     <!-- Include all compiled plugins (below), or include individual files as needed -->
     <script src="js/bootstrap.min.js"></script>
+    <script>
+    $(function () {
+    var parent = $("#parties");
+    var divs = parent.children();
+    while (divs.length) {
+        parent.append(divs.splice(Math.floor(Math.random() * divs.length), 1)[0]);
+    }
+    });
+    </script>
   </body>
 </html>
